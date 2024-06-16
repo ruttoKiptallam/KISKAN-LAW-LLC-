@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/css/layers.css" rel="stylesheet">
+
+    <title>Layers</title>
+  </head>
+  <body>
+    <header>
+      <div class="top_nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <div class="_ne_ol_vd">
+                <ol>
+                  <li class="_no_lo_hg">+91 9751791203</li>
+                  <li>sales@smarteyeapps.com</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="_ne_ol_vw">
+                <ol>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-wrapper">
+        <div class="container">
+          <div class="row">
+            <nav>
+              <div class="logo">
+                <a href="#">
+                  <img src="assets/images/kiskan-law-africa-logo.png">
+                </a>
+              </div>
+              <div class="menu-toggle"></div>
+              <div class="my-nav">
+                <div class="menu">
+                  <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="Our Team.html">Our Team</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
+                    <li><a href="affiliations.html">affiliations</a></li>
+                    <li><a href="contact us.html">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===========================================SLIDER>>>START=========================================== -->
+    <section class="slidee">
+      <sliid>
+          <style>
+              .sliid {
+                  max-height: 100%;
+                  margin: 0;
+                  max-width: 100%;
+                  background-size: cover;
+                  font-family: Arial, sans-serif;
+                  display: flex;
+                  overflow: hidden;
+                  justify-content: center;
+                  background-color: #1c2aec;
+              }
+              .slider {
+                  position: relative;
+                  max-width: 100%;
+                  height: 100%;
+                  overflow: hidden;
+                  border: 0px solid #ddd;
+                  background-color: #fff;
+              }
+              .slides {
+              width: 100%;
+              height: 100%;
+                  display: flex;
+                  transition: transform 0.5s ease-in-out;
+              }
+              .slide {
+                min-height: 100%;
+                min-width: 100%;
+                  box-sizing: border-box;
+                  position: relative;
+                  text-align: center;
+                  color: rgb(255, 255, 255);
+              }
+              .slide img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+              }
+              .slide-content {
+                  position: absolute;
+                  top: 40%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  padding: 30px;
+                  border-radius: 0px;
+              }
+              .navigation {
+                  position: absolute;
+                  top: 50%;
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-between;
+                  transform: translateY(-50%);
+              }
+              .navigation button {
+                  background-color: rgba(0, 0, 0, 0.5);
+                  color: #fff;
+                  border: none;
+                  padding: 10px;
+                  cursor: pointer;
+              }
+              .navigation button:hover {
+                  background-color: rgba(0, 0, 0, 0.7);
+              }
+              @media (orientation: portrait) {
+            .slide-content {
+                padding: 10px;
+                width: 100%;
+            }
+
+            .slide-content h1 {
+                font-size: 1.8em;
+            }
+
+            .slide-content p {
+                font-size: 1em;
+            }
+        } 
+          </style>
+          
+          <div class="slider">
+              <div class="slides" id="slides">
+                  <div class="slide">
+                      <img src="assets/images/about-01.jpg" alt="Image 1">
+                      <div class="slide-content">
+                          <h1>Welcome to KISKAN LAW AFRICA LLP ADVOCATES</h1>
+                          <p>Kiskan Law is a young, dynamic and fast-paced law firm. We are a passionate and highly professional team of legal practitioners, researchers, paralegals and interns specializing in Public Interest & Constitutional Litigation </p>
+                          
+                      </div>
+                  </div>
+                  <div class="slide">
+                      <img src="assets/images/about-01.jpg" alt="Image 2">
+                      <div class="slide-content">
+                          <h1>Our Commitment to Quality Legal Services</h1>
+                          <p>Kiskan Law is a young, dynamic and fast-paced law firm. We are a passionate and highly professional team of legal measurable value to each client’s unique situation. Put simply, we deliver results – without breaking your budget.</p>
+                         
+                      </div>
+                  </div>            
+              </div>
+              <div class="navigation">
+                  <button id="prevBtn">&#10094; Prev</button>
+                  <button id="nextBtn">Next &#10095;</button>
+              </div>
+          </div>
+      
+          <script>
+              const slides = document.getElementById('slides');
+              const totalSlides = slides.children.length;
+              let index = 0;
+              const intervalTime = 5000; // Interval time in milliseconds (3 seconds)
+      
+              document.getElementById('prevBtn').addEventListener('click', () => {
+                  prevSlide();
+                  resetInterval();
+              });
+      
+              document.getElementById('nextBtn').addEventListener('click', () => {
+                  nextSlide();
+                  resetInterval();
+              });
+      
+              function prevSlide() {
+                  if (index > 0) {
+                      index--;
+                  } else {
+                      index = totalSlides - 1;
+                  }
+                  updateSlidePosition();
+              }
+      
+              function nextSlide() {
+                  if (index < totalSlides - 1) {
+                      index++;
+                  } else {
+                      index = 0;
+                  }
+                  updateSlidePosition();
+              }
+      
+              function updateSlidePosition() {
+                  slides.style.transform = `translateX(${-index * 100}%)`;
+              }
+      
+              function resetInterval() {
+                  clearInterval(autoSlideInterval);
+                  autoSlideInterval = setInterval(nextSlide, intervalTime);
+              }
+      
+              // Start auto-slide
+              let autoSlideInterval = setInterval(nextSlide, intervalTime);
+          </script>
+      </sliid>
+      </section>
+    
+    <!-- =========================================ABOUT US>>>END========================================= -->
+    <section id="aboutus" class="_ab_er_we">
+      <div class="container">       
+            <div class="_hg_we_fe">
+              <h3>About</h3>
+              <h2><span>KISKAN LAW AFRICA<br> LLP ADVOCATES</span></h2>
+            </div>     
+
+        <div class="row">
+          <div class="col-lg-8 col-12">
+            <div class="_lk_fr_er">
+              <p>KISKAN LAW AFRICA LLP ADVOCATES is a young, dynamic, energetic and fast-paced law firm that was established following a merger between Kisabit & Associates (Est. 2012) and Mburugu & Kanyonge Associates, Advocates (Est.2014). It consists of brilliant and diverse legal practitioners, researchers, paralegals and interns </p>
+
+              <p>Our expertise includes public interest & constitutional ligitation real estate planning & environmental law, employment & labour relations, intellectual property, corporate & commercial law, private client & succession.</p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12">
+            <div class="_lk_rt_we">
+              <img src="assets/images/about.avif"> 
+          </div>
+        </div>
+ <style>    
+ ._ab_er_we{
+	max-width: 100%;
+	background:#fafafa;
+	flex-wrap: wrap;
+	visibility:visible;
+	overflow: hidden;
+	position:relative;
+}
+
+._hg_we_fe{
+	max-width: 100%;
+	display: flex;
+	position: relative;
+	z-index:9;
+	text-align:left;
+
+}
+
+._ab_er_we ._hg_we_fe h2{
+	display: flex;
+	margin-left: 5px;
+	font-size:20px;
+	color:#292929;
+	font-weight:400;
+	letter-spacing:0.6px;
+	text-transform:uppercase;	
+}
+
+._hg_we_fe h2 span{
+	z-index:9;
+	text-align:left;
+	color:#26f331;
+	font-weight:bold;
+	margin-left:10px;
+}
+
+._hg_we_fe h2::before{
+	position:absolute;
+	content:"";
+	width:7%;
+	height:3px;
+	background:#26f331;
+	bottom:0;
+	left:20px;
+}
+
+._hg_we_fe h2::after{
+	position:absolute;
+	content:"";
+	height:3px;
+	width:5px;
+	background:#fff;
+	left:0;
+	bottom:0;
+	z-index:1;
+	-webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: LINE-MOVE;
+    animation-name: LINE-MOVE;
+}
+
+._lk_fr_er {
+    margin: 10px 0 20px 0px;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+._lk_fr_er p{
+	align-items: center;
+	justify-content: center;
+	font-size:16px;
+	color:#5c5c5c;
+	letter-spacing:0.2px;
+	text-align:center;
+	line-height:33px;
+}
+        </style>
+      </div>
+    </section>
+
+    <!-- ========================================SERVICESS>>>START======================================== -->
+
+    <section id="services" class="ten">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="_hg_we_fe">
+              <h2>Our <span>  Areas Of Experties</span></h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="rent">
+          <p>Our expertise includes public interest & constitutional ligitation real estate planning & environmental law, employment & labour relations, intellectual property, corporate & commercial law, private client & succession.<br><br></p>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="_ne_ol_vd_pl">
+              <div style="background-image:url(assets/images/public-interest-law.png);" class="_ne_ol_vd_pr"></div>
+              <h2>Public Interest & <br>Constitutional Ligitation<br><a href="Public Interest.html">more</a></h2>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="_ne_ol_vd_pl">
+              <div style="background-image:url(assets/images/real-estate-law.jpeg);" class="_ne_ol_vd_pr"></div>
+              <h2>Real Estate Planning <br>& Environmental Law<br><br><a href="Real Estate Planning.html">more</a></h2>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="_ne_ol_vd_pl">
+              <div style="background-image:url(assets/images/labor-law.jpeg);" class="_ne_ol_vd_pr"></div>
+              <h2>Employment & <br>Labor Relations<br><a href="Employment.html">more</a></h2>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="_ne_ol_vd_pl">
+              <div style="background-image:url(assets/images/intellectual-property-law.jpeg);" class="_ne_ol_vd_pr"></div>
+              <h2>Intellectual Property<br><a href="Intellectual Property.html">more</a></h2>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="_ne_ol_vd_pl">
+              <div style="background-image:url(assets/images/corporate-law.jpeg);" class="_ne_ol_vd_pr"></div>
+              <h2>Corporate &<br> Commercial Law<br><a href="coperate.html">more</a></h2>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="_ne_ol_vd_pl">
+              <div style="background-image:url(assets/images/private-client-law.jpeg);" class="_ne_ol_vd_pr"></div>
+              <h2>Private Client<br> & Succession<br><a href="Private Client.html">more</a></h2>                     
+            </div>
+          </div>          
+        </div>
+<style>
+.ten .container{
+  align-content: center;
+  background-size: cover;
+	background:#fff;
+  max-width: 100%;
+}
+
+.rent{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  max-width: 97%;
+  background-color: #fff;
+  padding: 0px;
+	margin-top:30px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.ten ._ne_ol_vd_pl {
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 210px;
+    max-height: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #10dd4d;
+    position: relative;    
+    margin: 20px;
+}
+
+.ten ._ne_ol_vd_pl ._ne_ol_vd_pr {
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.ten ._ne_ol_vd_pl:hover ._ne_ol_vd_pr {
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+}
+
+.ten ._ne_ol_vd_pl ._ne_ol_vd_pr::after {
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(10,10,10,.35);
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.ten ._ne_ol_vd_pl:hover ._ne_ol_vd_pr::after {
+        background: rgba(13, 2, 1, 0.9);
+}
+
+.ten ._ne_ol_vd_pl h2 {
+    text-align: center;
+    z-index: 1;
+    font-size:18px;
+    letter-spacing:0.5px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ten ._ne_ol_vd_pl:hover h2::before, ._vd_yt_re_wq ._ne_ol_vd_pl:hover h2::after {
+    -webkit-transition: all 2s cubic-bezier(.14,1.13,0,.91);
+    -moz-transition: all 2s cubic-bezier(.14,1.13,0,.91);
+    -o-transition: all 2s cubic-bezier(.14,1.13,0,.91);
+    transition: all 2s cubic-bezier(.14,1.13,0,.91);
+    opacity: 1;
+}
+
+.ten ._ne_ol_vd_pl:hover h2::before {
+    -webkit-transform: translate(-30px,20px) scale(1);
+    -moz-transform: translate(-30px,20px) scale(1);
+    -ms-transform: translate(-30px,20px) scale(1);
+    -o-transform: translate(-30px,20px) scale(1);
+    transform: translate(-30px,20px) scale(1);
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+}
+
+.ten ._ne_ol_vd_pl h2::before {
+    left: -10px;
+    bottom: -10px;
+}
+
+.ten ._ne_ol_vd_pl h2::before, ._vd_yt_re_wq ._ne_ol_vd_pl h2::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0;
+    -webkit-transition: all .5s cubic-bezier(1,.2,.26,.7);
+    -moz-transition: all .5s cubic-bezier(1,.2,.26,.7);
+    -o-transition: all .5s cubic-bezier(1,.2,.26,.7);
+    transition: all .5s cubic-bezier(1,.2,.26,.7);
+    -webkit-transform: translate(0px,0px) scale(.8);
+    -moz-transform: translate(0px,0px) scale(.8);
+    -ms-transform: translate(0px,0px) scale(.8);
+    -o-transform: translate(0px,0px) scale(.8);
+    transform: translate(0px,0px) scale(.8);
+    opacity: 1;
+    z-index: 100;
+}
+
+.ten ._ne_ol_vd_pl:hover h2::after {
+    -webkit-transform: translate(30px,-20px) scale(1);
+    -moz-transform: translate(30px,-20px) scale(1);
+    -ms-transform: translate(30px,-20px) scale(1);
+    -o-transform: translate(30px,-20px) scale(1);
+    transform: translate(30px,-20px) scale(1);
+    border-top-width: 3px;
+    border-right-width: 3px;
+}
+
+.ten ._ne_ol_vd_pl h2::after {
+    right: -10px;
+    top: -10px;
+}
+
+._ng_cs_we_rw{
+	background:url(../images/img-02.jpg);
+	background-size:cover;
+	position:relative;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	overflow:hidden;
+	padding:40px 0px;
+}
+
+._ng_cs_we_rw::before{
+	content:"";
+	position:absolute;
+	width:100%;
+	top:0;
+	bottom:0;
+	padding:40px 0px;
+	background:rgba(0,0,0,0.8);
+}
+
+._lk_bg_cd{
+	display:inline-block;
+	width:100%;
+	position:relative;
+	text-align:center;
+	margin:20px 0px;
+	color:#fff;
+}
+
+._lk_bg_cd img{
+	margin:20px 0px;
+
+}
+
+._lk_bg_cd h5{
+	margin:20px 0px;
+}
+        </style>
+      </div>
+    </section>
+
+    <!-- ========================================SERVICESS>>>END======================================== -->
+    <section id="aboutus" class="_ab_er_we">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="_hg_we_fe">
+              <h2>Need legal aid?</h2>
+              <h2> <span>KISKAN LAW </span>has you covered</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-12">
+            <div class="_lk_fr_er">
+              
+              <p>KISKAN LAW offers expert legal support tailored to your needs. Our dedicated team ensures proactive, client-focused representation. Experience peace of mind with our commitment to achieving favorable outcomes</p>
+              <div class="accordion" id="nu_kl">
+                <div class="card">
+                  <div class="card-header" id="mo_yu">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#my-ss" aria-expanded="false" aria-controls="my-ss">
+                        Great Results Don't Require Great Expense 
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id="my-ss" class="collapse" aria-labelledby="mo_yu" data-parent="#nu_kl">
+                    <div class="card-body">
+                      Efficiency and advocacy are both key elements to the successful resolution of any matter. Yet you don’t have to sacrifice results for cost. Our Firm is committed to providing high-quality legal services and responsive, proactive solutions that bring measurable value to each client’s unique situation. Put simply, we deliver results – without breaking your budget.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="mo_yu_a">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#my-ss_a" aria-expanded="false" aria-controls="my-ss_a">
+                        Experience 
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="my-ss_a" class="collapse" aria-labelledby="mo_yu_a" data-parent="#nu_kl">
+                    <div class="card-body">
+                      The Team's considerable experience in dispute resolution and transactions, makes it uniquely positioned to get the best possible result for each client.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="mo_yu_b">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#my-ss_b" aria-expanded="false" aria-controls="my-ss_b">
+                        Fees 
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="my-ss_b" class="collapse" aria-labelledby="mo_yu_b" data-parent="#nu_kl">
+                    <div class="card-body">
+                      The Firm strives to make its fee structure and your legal costs as transparent and predictable as possible.We believe that client relationships must be based on trust and a sense of common purpose. For this reason, the Firm encourages clients to explore a billing arrangement that suits their goals and rewards us for success. The types of fee arrangements vary and are tailored to the needs of the client, the client’s goals, and the nature of the case. However we strive to abide by the Advocates Remuneration Order.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="mo_yu_b">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#my-ss_b" aria-expanded="false" aria-controls="my-ss_b">
+                        Client Satisfaction 
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="my-ss_b" class="collapse" aria-labelledby="mo_yu_b" data-parent="#nu_kl">
+                    <div class="card-body">
+                      The Firm's top priority is to provide its clients with high-quality legal services, excellent client service and creative approaches to addressing legal issues.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12">
+            <div class="_lk_rt_we">
+              <img src="assets/images/why.avif">
+              <div class="_oi_yt_we">
+                
+              </div>                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>
+          ._ab_er_we .container{
+	background:#fff;
+  background-size: cover;
+  max-width: 100%;
+  align-content: center;
+  justify-content: center;
+	position:relative;
+}
+._ab_er_we img{
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  position: relative;
+}
+._hg_we_fe{
+  max-width: 90%;
+	display:inline-block;
+	text-align:left;
+
+}
+
+._hg_we_fe h2{
+	font-size:20px;
+	color:#292929;
+	font-weight:400;
+	letter-spacing:0.6px;
+	white-space:nowrap;
+	text-transform:uppercase;	
+}
+
+._hg_we_fe h2 span{
+	color:#26f331;
+	font-weight:bold;
+}
+
+._hg_we_fe h2::before{
+	content:"";
+	width:100px;
+	height:3px;
+	background:#26f331;
+	bottom:0;
+	left:0;
+}
+
+._hg_we_fe h2::after{
+	content:"";
+	height:3px;
+	width:7px;
+	background:#fff;
+	left:0;
+	bottom:0;
+	z-index:1;
+	-webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: LINE-MOVE;
+    animation-name: LINE-MOVE;
+}
+
+._lk_fr_er {
+    margin: 10px 0 20px 0px;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+._lk_fr_er p{
+	font-size:16px;
+	color:#5c5c5c;
+	letter-spacing:0.2px;
+	text-align:left;
+	line-height:33px;
+}
+
+._oi_yt_we{
+	position:relative;
+	z-index:2;
+	display:inline-block;
+	width:100%;
+	overflow:hidden;
+	margin:20px 0px;
+}
+
+._oi_yt_we .accordion .card{
+	margin: 10px 0px;
+    border: 1px solid#26f331;
+    border-radius: 0px;
+    background:transparent;
+}
+
+.card-header{
+	background:transparent !important;
+}
+
+.btn-link{
+	color:#292929;
+	text-decoration:none;
+}
+
+.btn-check:focus+.btn, .btn:focus{
+	outline:0;
+	box-shadow:none !important;
+}
+
+.card-header {
+    padding: 0rem 1rem;
+}
+
+.text-left::before {
+    position: absolute;
+    content: "\f067";
+    font-size: 16px;
+    color: #26f331;
+    font-family: fontawesome;
+    right: 30px;
+}
+
+._kl_bv_xs{
+	position:relative;
+	display:block;
+	margin:20px 0px;
+	z-index:1;
+}
+
+._kl_bv_xs ol li {
+    display: flex;
+    width: 30%;
+    height: 150px;
+    margin: 10px;
+    float: left;
+    position: relative;
+    justify-content: center;
+}
+
+._kl_bv_xs ol li p{
+	position: absolute;
+    bottom: 0;
+    margin: 0;
+    color:#292929;
+    font-size:18px;
+    font-weight:500;
+    line-height:22px;
+    text-align:center;
+}
+
+._kl_bv_xs ol li::before {
+    position: absolute;
+    content: "\f1cd";
+    font-family: fontawesome;
+    font-size: 30px;
+    color: #26f331;
+    height: 100px;
+    width: 100px;
+    background: #dfdfdf;
+    border-radius: 50%;
+    line-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 1px 7px #fff;
+    -webkit-box-shadow: inset 0 0 1px 10px #fff;
+    -moz-box-shadow: inset 0 0 1px 10px #fff;
+    box-shadow: inset 0 0 1px 10px #fff;
+}
+
+._kl_bv_xs ol li:nth-child(2)::before{
+	content:"\f025";
+}
+
+._kl_bv_xs ol li:nth-child(3)::before{
+	content:"\f02d";
+}
+
+._kl_bv_xs ol li:hover::before{
+	transform: rotate(360deg);
+    transition: transform 0.9s ease 0s;
+	background:#01082d;
+	color:#fff;
+	-webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    /*box-shadow: inset 0 0 1px 7px #26f331;
+    -webkit-box-shadow: inset 0 0 1px 10px #26f331;
+    -moz-box-shadow: inset 0 0 1px 10px #26f331;
+    box-shadow: inset 0 0 1px 10px #26f331;*/
+    box-shadow:none;
+
+}
+@media(max-width: 992px){
+  ._ab_er_we {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+  }
+  ._ab_er_we img{
+    margin-left: 0px;
+    width: 500%;
+  }
+}
+
+        </style>
+      </div>
+    </section>
+
+    <!-- ======================================CALCULATION>>>START====================================== -->
+
+    
+
+    <!-- ======================================TEAM>>>END====================================== -->
+
+
+    <!-- ====================================FOOTER>>>STARTED==================================== -->
+
+    <footer class="_vc_zs_qw">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="_nb_cd_er">
+              <h2>About Us</h2>
+              <p>Kiskan Law is a young, dynamic and fast-paced law firm. We are a passionate and highly professional team of legal practitioners, researchers, paralegals and interns specializing in Public Interest & Constitutional Litigation</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="_nb_cd_er">
+              <h2>Quick Links</h2>
+              <ol>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ol>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="_nb_cd_er">
+              <h2>practice areas</h2>
+              <p>Public Interest & Constitutional Ligitation<br>
+                Real Estate Planning & Environmental Law<br>
+                Employment & Labour Relations<br>
+                Intellectual Property<br>
+                Corporate & Commercial Law<br>
+                Private Client & Succession</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="_nb_cd_er">
+              <h2>Address</h2>
+              <ul>
+                <li><p>Ngong road, Opposite Adams Arcade, Apple Wood Adams,
+                  5 th Floor, Suite No. 501</p></li>
+
+                <li><p>info@kiskanlawafrica.com, info@mkaadvocates.co.ke</p></li>
+                <li><p>+254758409619, +254733318378</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <section class="end-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="_jh_er_xs">
+              <p>Kiskan Law © 2024 - All rights reserved. Designed by <a href="https://techcrast.co.ke/">Techrast</a></p>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="_jh_er_xs _cc_ui">
+              <p>Terms & Conditions<a href="#" target="_blank">Privacy Policy</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================FOOTER>>>END==================================== -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <script>
+      $(document).ready (function(){
+        $('.menu-toggle').click(function(){
+          $('.menu-toggle').toggleClass('active')
+          $('.menu').toggleClass('active')
+        })
+      })
+    </script>
+
+    <script>
+      $( () => {
+    
+        //On Scroll Functionality
+        $(window).scroll( () => {
+          var windowTop = $(window).scrollTop();
+          windowTop > 50 ? $('.header-wrapper').addClass('og-hf') : $('.header-wrapper').removeClass('og-hf');
+        });
+      });
+    </script>
+
+    <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                items:3,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true
+              });
+              $('.play').on('click', function() {
+                owl.trigger('play.owl.autoplay', [1000])
+              })
+              $('.stop').on('click', function() {
+                owl.trigger('stop.owl.autoplay')
+              })
+            })
+          </script>
+
+    <script>
+      $('.owl-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          nav:true,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:2
+              },
+              1000:{
+                  items:4
+              }
+          }
+})
+    </script>
+
+    <script>
+      $('.counting').each(function() {
+        var $this = $(this),
+        countTo = $this.attr('data-count');
+  
+      $({ countNum: $this.text()}).animate({
+        countNum: countTo
+        },
+
+      {
+
+      duration: 3000,
+      easing:'linear',
+      step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+      complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+    });  
+  
+
+  });
+    </script>
+  </body>
+</html>
